@@ -33,10 +33,7 @@ def generate_trip_plan(destination, duration, budget):
     draw_map(destination=destination) 
     st.success("Trip plan generating.. 🧳")
     travel_planner = GeminiTripPlanner(destination=destination, budget=budget, days=duration)
-
-    st.write_stream(travel_planner.on_time_stream_response())
-
-
+    
     st.success("Engagement Graph is ready! 🚀")
     columns = []
     for i in range(1, duration + 1):
@@ -47,7 +44,11 @@ def generate_trip_plan(destination, duration, budget):
 	columns=columns
     )
 
-    st.line_chart(chart_data, )
+    st.line_chart(chart_data)
+    
+    st.write_stream(travel_planner.on_time_stream_response())
+
+
  
     
 
