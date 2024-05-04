@@ -8,6 +8,10 @@ from streamlit_folium import folium_static
 from app.gmap import extract_locations
 from app.gemini import GeminiTripPlanner
 
+st.set_page_config(
+page_title="AI-driven Trip Planner",
+page_icon="🌍",
+)
 
 def draw_map(destination):
     locations = extract_locations(destination) 
