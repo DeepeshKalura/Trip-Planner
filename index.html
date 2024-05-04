@@ -58,6 +58,7 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
+
 	</head>
 
 	<body>
@@ -129,13 +130,18 @@
 
 									</h2>
 									<div class="about-btn">
-										<button  class="about-view">
+										<button  class="about-view" id="app-button">
 											go to our app
 										</button>
 									</div>/<!--.about-btn-->
 								</div><!--/.about-us-txt-->
 							</div><!--/.single-about-us-->
 						</div><!--/.col-->
+						<script>
+							document.getElementById('app-button').onclick = function() {
+								window.location.href = 'http://localhost:8501';
+							};
+						</script>
 						<div class="col-sm-0">
 							<div class="single-about-us">
 								
