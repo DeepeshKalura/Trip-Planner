@@ -6,7 +6,7 @@ import pandas as pd
 from streamlit_folium import folium_static
 
 from app.gmap import extract_locations
-from app.gemini import ReGemnini
+from app.gemini import GeminiTripPlanner
 
 
 def draw_map(destination):
@@ -32,7 +32,7 @@ def generate_trip_plan(destination, duration, budget):
     
     draw_map(destination=destination) 
     st.success("Trip plan generating.. 🧳")
-    travel_planner = ReGemnini(destination=destination, budget=budget, days=duration)
+    travel_planner = GeminiTripPlanner(destination=destination, budget=budget, days=duration)
 
     st.write_stream(travel_planner.on_time_stream_response())
 
