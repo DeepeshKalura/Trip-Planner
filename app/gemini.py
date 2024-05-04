@@ -8,8 +8,6 @@ load_dotenv()
 genai.configure(api_key=os.environ.get("GOOGLE_API_KEY"))
 
 
-
-
 class GeminiTripPlanner:
     def __init__(self, destination, budget, days):
         self.destination = destination
