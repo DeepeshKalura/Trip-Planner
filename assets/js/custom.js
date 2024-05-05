@@ -63,11 +63,11 @@ $(document).ready(function(){
             max: 12000,
             values: [ 2677, 9241 ],
             slide: function( event, ui ) {
-            $( "#amount" ).val( "₹" + ui.values[ 0 ] + " - ₹" + ui.values[ 1 ] );
+            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
             }
         });
-        $( "#amount" ).val( "₹" + $( "#slider-range" ).slider( "values", 0 ) +
-        " - $" + ₹( "#slider-range" ).slider( "values", 1 ) );
+        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
         
         
         // Quantity Buttons Shop
@@ -90,7 +90,7 @@ $(document).ready(function(){
         
         function makeTimer() {
 
-                var endTime = new Date("March 7, 2018 12:00:00 PDT");            
+                var endTime = new Date("December 31, 2024 12:00:00 PDT");            
                 var endTime = (Date.parse(endTime)) / 1000;
 
                 var now = new Date();
