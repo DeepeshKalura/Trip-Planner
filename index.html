@@ -59,6 +59,7 @@
 	</head>
 
 	<body>
+
 		<!--[if lte IE 9]>
 		<![endif]-->
 
@@ -91,7 +92,7 @@
 										<li class="smooth-menu"><a href="#blog">blog</a></li>
 										<li class="smooth-menu"><a href="#subs">subscription</a></li>
 										<li>
-											<button class="book-btn">book now
+											<button class="book-btn" id="app-button">book now
 											</button>
 										</li><!--/.project-btn--> 
 									</ul>
@@ -120,7 +121,7 @@
 
 									</h2>
 									<div class="about-btn">
-										<button  class="about-view">
+										<button  class="about-view" id="app-button">
 											book now
 										</button>
 									</div><!--/.about-btn-->
@@ -323,7 +324,7 @@
 								</div><!--/.timer-->
 							</div><!--/.campaign-timer-->
 							<div class="about-btn">
-								<button  class="about-view discount-offer-btn">
+								<button  class="about-view discount-offer-btn" id="app-button">
 									join now
 								</button>
 							</div><!--/.about-btn-->
@@ -469,8 +470,8 @@
 									</div><!--/.packages-para-->
 									<div class="offer-btn-group">
 										
-										<div class="about-btn">
-											<button  class="about-view packages-btn">
+										<div class="about-btn" >
+											<button  class="about-view packages-btn" id="app-button">
 												book now
 											</button>
 										</div><!--/.about-btn-->
@@ -708,6 +709,12 @@
 
 
 		<script src="assets/js/jquery.js"></script>
+
+		<script>
+				document.getElementById('app-button').onclick = function() {
+    			window.location.href = 'http://localhost:8501';
+			};
+		</script>
 
 		<!--modernizr.min.js-->
 		<script  src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
